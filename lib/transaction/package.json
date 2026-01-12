@@ -1,0 +1,4 @@
+{
+  "main": "../adapter/admin/transaction.js",
+  "types": "../types/transaction.d.ts"
+}

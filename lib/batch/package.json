@@ -1,0 +1,4 @@
+{
+  "main": "../adapter/admin/batch.js",
+  "types": "../types/batch.d.ts"
+}

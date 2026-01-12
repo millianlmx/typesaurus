@@ -1,0 +1,206 @@
+{
+  "name": "typesaurus",
+  "version": "10.7.1",
+  "description": "Type-safe ODM for Firestore",
+  "keywords": [
+    "Firebase",
+    "Firestore",
+    "TypeScript"
+  ],
+  "sideEffects": false,
+  "browser": "./adapter/web/index",
+  "main": "./adapter/admin/index.js",
+  "module": "./adapter/admin/index.mjs",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "require": {
+        "types": "./index.d.ts",
+        "browser": "./adapter/web/index.js",
+        "default": "./adapter/admin/index.js"
+      },
+      "import": {
+        "types": "./index.d.mts",
+        "browser": "./adapter/web/index.mjs",
+        "default": "./adapter/admin/index.mjs"
+      }
+    },
+    "./batch": {
+      "require": {
+        "types": "./types/batch.d.ts",
+        "browser": "./adapter/web/batch.js",
+        "default": "./adapter/admin/batch.js"
+      },
+      "import": {
+        "types": "./types/batch.d.mts",
+        "browser": "./adapter/web/batch.mjs",
+        "default": "./adapter/admin/batch.mjs"
+      }
+    },
+    "./groups": {
+      "require": {
+        "types": "./types/groups.d.ts",
+        "browser": "./adapter/web/groups.js",
+        "default": "./adapter/admin/groups.js"
+      },
+      "import": {
+        "types": "./types/groups.d.mts",
+        "browser": "./adapter/web/groups.mjs",
+        "default": "./adapter/admin/groups.mjs"
+      }
+    },
+    "./transaction": {
+      "require": {
+        "types": "./types/transaction.d.ts",
+        "browser": "./adapter/web/transaction.js",
+        "default": "./adapter/admin/transaction.js"
+      },
+      "import": {
+        "types": "./types/transaction.d.mts",
+        "browser": "./adapter/web/transaction.mjs",
+        "default": "./adapter/admin/transaction.mjs"
+      }
+    },
+    "./helpers": {
+      "require": {
+        "types": "./helpers/index.d.ts",
+        "default": "./helpers/index.js"
+      },
+      "import": {
+        "types": "./helpers/index.d.mts",
+        "default": "./helpers/index.mjs"
+      }
+    },
+    "./sp": {
+      "require": {
+        "types": "./sp/index.d.ts",
+        "default": "./sp/index.js"
+      },
+      "import": {
+        "types": "./sp/index.d.mts",
+        "default": "./sp/index.mjs"
+      }
+    },
+    "./adapter/admin": {
+      "require": {
+        "default": "./adapter/admin/index.js"
+      },
+      "import": {
+        "default": "./adapter/admin/index.mjs"
+      }
+    },
+    "./adapter/admin/batch": {
+      "require": {
+        "default": "./adapter/admin/batch.js"
+      },
+      "import": {
+        "default": "./adapter/admin/batch.mjs"
+      }
+    },
+    "./adapter/admin/core": {
+      "require": {
+        "default": "./adapter/admin/core.js"
+      },
+      "import": {
+        "default": "./adapter/admin/core.mjs"
+      }
+    },
+    "./adapter/admin/firebase": {
+      "require": {
+        "default": "./adapter/admin/firebase.js"
+      },
+      "import": {
+        "default": "./adapter/admin/firebase.mjs"
+      }
+    },
+    "./adapter/admin/groups": {
+      "require": {
+        "default": "./adapter/admin/groups.js"
+      },
+      "import": {
+        "default": "./adapter/admin/groups.mjs"
+      }
+    },
+    "./adapter/admin/transaction": {
+      "require": {
+        "default": "./adapter/admin/transaction.js"
+      },
+      "import": {
+        "default": "./adapter/admin/transaction.mjs"
+      }
+    },
+    "./adapter/web": {
+      "require": {
+        "default": "./adapter/web/index.js"
+      },
+      "import": {
+        "default": "./adapter/web/index.mjs"
+      }
+    },
+    "./adapter/web/batch": {
+      "require": {
+        "default": "./adapter/web/batch.js"
+      },
+      "import": {
+        "default": "./adapter/web/batch.mjs"
+      }
+    },
+    "./adapter/web/core": {
+      "require": {
+        "default": "./adapter/web/core.js"
+      },
+      "import": {
+        "default": "./adapter/web/core.mjs"
+      }
+    },
+    "./adapter/web/firebase": {
+      "require": {
+        "default": "./adapter/web/firebase.js"
+      },
+      "import": {
+        "default": "./adapter/web/firebase.mjs"
+      }
+    },
+    "./adapter/web/groups": {
+      "require": {
+        "default": "./adapter/web/groups.js"
+      },
+      "import": {
+        "default": "./adapter/web/groups.mjs"
+      }
+    },
+    "./adapter/web/transaction": {
+      "require": {
+        "default": "./adapter/web/transaction.js"
+      },
+      "import": {
+        "default": "./adapter/web/transaction.mjs"
+      }
+    }
+  },
+  "repository": "https://github.com/kossnocorp/typesaurus",
+  "author": "Sasha Koss <koss@nocorp.me>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.18.10",
+    "@babel/core": "^7.18.10",
+    "@babel/plugin-transform-modules-commonjs": "^7.18.6",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-typescript": "^7.18.6",
+    "@types/node": "^18.19.0",
+    "@types/sinon": "^10.0.13",
+    "@typescript/analyze-trace": "^0.10.1",
+    "@vitest/browser": "^1.1.0",
+    "babel-plugin-add-import-extension": "^1.6.0",
+    "firebase": "^10.8.0",
+    "firebase-admin": "^12.0.0",
+    "firebase-tools": "^13.1.0",
+    "playwright": "^1.40.1",
+    "prettier": "^3.2.5",
+    "sinon": "^14.0.0",
+    "size-limit": "^8.0.0",
+    "size-limit-preset-node-lib": "^0.1.0",
+    "typescript": "^5.4.4",
+    "vitest": "^1.1.0"
+  }
+}
